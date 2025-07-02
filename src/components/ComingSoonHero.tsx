@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Car, Zap, Users, Shield, ArrowRight } from "lucide-react";
+import { Users, CreditCard, Smartphone, Shield, ArrowRight, Repeat, Bell } from "lucide-react";
 import heroImage from "@/assets/hero-rideshare.jpg";
 
 const ComingSoonHero = () => {
@@ -45,24 +45,24 @@ const ComingSoonHero = () => {
 
   const features = [
     {
-      icon: Car,
-      title: "Autonomous Fleet",
-      description: "AI-powered vehicles that learn and adapt to your preferences"
-    },
-    {
-      icon: Zap,
-      title: "Instant Matching",
-      description: "Connect with rides in under 10 seconds using quantum algorithms"
-    },
-    {
       icon: Users,
-      title: "Smart Pooling",
-      description: "Dynamic route optimization for maximum efficiency and savings"
+      title: "Create Groups",
+      description: "Roommates, trips, office lunches - add members by phone or UPI ID"
     },
     {
-      icon: Shield,
-      title: "Zero Trust Security",
-      description: "Blockchain-verified rides with end-to-end encryption"
+      icon: CreditCard,
+      title: "Instant UPI Collect",
+      description: "Auto-split bills and collect payments via UPI instantly"
+    },
+    {
+      icon: Repeat,
+      title: "Recurring Splits",
+      description: "Auto-triggered monthly splits for rent, utilities, and subscriptions"
+    },
+    {
+      icon: Bell,
+      title: "Smart Reminders",
+      description: "UPI reminder nudges and one-tap settlement for peace of mind"
     }
   ];
 
@@ -85,14 +85,14 @@ const ComingSoonHero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent leading-tight">
-              The Next Ride Sharing
+              <span className="animate-glow">Enzovo</span>
               <br />
-              <span className="animate-glow">Revolution</span>
+              Split. Track. Collect.
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of transportation with AI-powered rides, quantum matching, 
-              and revolutionary technology that redefines how we move through the world.
+              The future of bill splitting in India. Seamless UPI payments, auto-collections, 
+              and smart group management. Think Splitwise × CRED × UPI AutoPay.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const ComingSoonHero = () => {
             <div className="relative max-w-6xl mx-auto">
               <img 
                 src={heroImage} 
-                alt="Future of ride sharing" 
+                alt="Enzovo bill splitting app" 
                 className="w-full h-auto rounded-2xl shadow-elegant animate-glow"
               />
               <div className="absolute inset-0 bg-hero-gradient opacity-20 rounded-2xl" />
@@ -139,9 +139,9 @@ const ComingSoonHero = () => {
           {/* Features Grid */}
           <div className="mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Revolutionary Features</h2>
+              <h2 className="text-3xl font-bold mb-4">Core Features</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Discover the cutting-edge technology that will transform your daily commute
+                No more manual bill splitting. No more awkward payment reminders. Just seamless UPI automation.
               </p>
             </div>
             
@@ -166,7 +166,7 @@ const ComingSoonHero = () => {
               <>
                 <h3 className="text-2xl font-bold mb-4">Get Early Access</h3>
                 <p className="text-muted-foreground mb-6">
-                  Be the first to know when we launch and get exclusive early access
+                  Join the waitlist and be among the first to experience seamless bill splitting
                 </p>
                 <form onSubmit={handleEmailSubmit} className="flex gap-2">
                   <Input
