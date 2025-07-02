@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, CreditCard, Smartphone, Shield, ArrowRight, Repeat, Bell } from "lucide-react";
-import heroImage from "@/assets/hero-rideshare.jpg";
+import heroImage from "@/assets/hero-genz-bills.jpg";
+import roommatesImage from "@/assets/roommates-split.jpg";
+import tripImage from "@/assets/trip-expenses.jpg";
+import coupleImage from "@/assets/couple-subscriptions.jpg";
 
 const ComingSoonHero = () => {
   const [email, setEmail] = useState('');
@@ -46,23 +49,23 @@ const ComingSoonHero = () => {
   const features = [
     {
       icon: Users,
-      title: "Create Groups",
-      description: "Roommates, trips, office lunches - add members by phone or UPI ID"
+      title: "Squad Groups 👥",
+      description: "Add your crew by phone/UPI - roomies, besties, work fam"
     },
     {
       icon: CreditCard,
-      title: "Instant UPI Collect",
-      description: "Auto-split bills and collect payments via UPI instantly"
+      title: "Instant UPI Magic ⚡",
+      description: "Split bills and collect payments faster than you can say 'Paytm'"
     },
     {
       icon: Repeat,
-      title: "Recurring Splits",
-      description: "Auto-triggered monthly splits for rent, utilities, and subscriptions"
+      title: "Auto-Recurring 🔄",
+      description: "Netflix, rent, maid - set it once, chill forever"
     },
     {
       icon: Bell,
-      title: "Smart Reminders",
-      description: "UPI reminder nudges and one-tap settlement for peace of mind"
+      title: "Smart Nudges 🔔",
+      description: "Gentle reminders that won't kill the vibe"
     }
   ];
 
@@ -80,19 +83,19 @@ const ComingSoonHero = () => {
           <div className="text-center mb-16 animate-fade-in-up">
             <div className="inline-block mb-6">
               <span className="bg-hero-gradient bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase animate-glow">
-                Coming Soon
+                ✨ Coming Soon ✨
               </span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent leading-tight">
               <span className="animate-glow">Enzovo</span>
               <br />
-              Split. Track. Collect.
+              Split Bills Like a Pro 🔥
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              The future of bill splitting in India. Seamless UPI payments, auto-collections, 
-              and smart group management. Think Splitwise × CRED × UPI AutoPay.
+              Stop the awkward "who owes what?" texts. Auto-split bills, collect via UPI, 
+              and keep your squad's finances drama-free 💸
             </p>
           </div>
 
@@ -139,9 +142,9 @@ const ComingSoonHero = () => {
           {/* Features Grid */}
           <div className="mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Core Features</h2>
+              <h2 className="text-3xl font-bold mb-4">How It Works ⚡</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                No more manual bill splitting. No more awkward payment reminders. Just seamless UPI automation.
+                No more manual tracking. No more awkward payment reminders. Just pure automation.
               </p>
             </div>
             
@@ -160,13 +163,64 @@ const ComingSoonHero = () => {
             </div>
           </div>
 
+          {/* Use Cases with Images */}
+          <div className="mb-16 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Perfect For Your Squad 👥</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Whether it's roommate drama or trip planning chaos, we've got you covered
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center group">
+                <div className="relative mb-4 overflow-hidden rounded-2xl">
+                  <img 
+                    src={roommatesImage} 
+                    alt="Roommates splitting bills" 
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-hero-gradient opacity-20" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Roommate Life 🏠</h3>
+                <p className="text-muted-foreground">Rent, groceries, utilities - split everything seamlessly</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative mb-4 overflow-hidden rounded-2xl">
+                  <img 
+                    src={tripImage} 
+                    alt="Friends on trip splitting expenses" 
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-hero-gradient opacity-20" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Squad Trips ✈️</h3>
+                <p className="text-muted-foreground">Hotels, food, Ubers - track every rupee effortlessly</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative mb-4 overflow-hidden rounded-2xl">
+                  <img 
+                    src={coupleImage} 
+                    alt="Couple managing subscriptions" 
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-hero-gradient opacity-20" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Date Night Bills 💕</h3>
+                <p className="text-muted-foreground">Netflix, Spotify, dinner dates - share the love and costs</p>
+              </div>
+            </div>
+          </div>
+
           {/* Email Signup */}
           <div className="max-w-md mx-auto text-center pb-20 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             {!isSubscribed ? (
               <>
-                <h3 className="text-2xl font-bold mb-4">Get Early Access</h3>
+                <h3 className="text-2xl font-bold mb-4">Join the Waitlist 🚀</h3>
                 <p className="text-muted-foreground mb-6">
-                  Join the waitlist and be among the first to experience seamless bill splitting
+                  Be the first to ditch the spreadsheets and awkward money talks
                 </p>
                 <form onSubmit={handleEmailSubmit} className="flex gap-2">
                   <Input
@@ -178,7 +232,7 @@ const ComingSoonHero = () => {
                     required
                   />
                   <Button type="submit" className="bg-hero-gradient hover:opacity-90 transition-opacity">
-                    Join <ArrowRight className="w-4 h-4 ml-1" />
+                    Join Squad <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
                 </form>
               </>
